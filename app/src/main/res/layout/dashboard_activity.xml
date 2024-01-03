@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dashboard_bg"
+        tools:context=".RegisterActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="56dp"
+            android:text="@string/Login_heading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/et_search_bar"
+            style="@style/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="30dp"
+            android:drawablePadding="10dp"
+            android:padding="15dp"
+            android:textColorHint="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:queryHint="Search" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_search_bar"
+            app:layout_constraintVertical_bias="0.0"
+            tools:itemCount="10"
+            tools:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            tools:listitem="@layout/items"
+            tools:orientation="vertical"
+            tools:scrollbars="vertical"
+            tools:spanCount="2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="139dp"
+            android:layout_height="166dp"
+            android:contentDescription="@string/desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_4"
+            tools:ignore="ImageContrastCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
